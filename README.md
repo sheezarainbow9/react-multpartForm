@@ -14,9 +14,6 @@ Repositório 05 do curso de React-JS da Alura-One.
 
 React: Hooks, Contexts e boas práticas.
 
-## Deploy da Aplicação :dash:
-
-
 
 
 
