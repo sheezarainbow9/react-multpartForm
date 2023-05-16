@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { TextField, Button, Switch, FormControlLabel } from "@material-ui/core";
 
 function DadosPessoais({ aoEnviar, validacoes }) {
