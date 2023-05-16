@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 function useErros(validacoes) {
   const estadoInicial = criarEstadoInicial(validacoes);
-  const [erros, setErros] = useState({ senha: { valido: true, texto: "" } });
+  // const [erros, setErros] = useState({ senha: { valido: true, texto: "" } });
+  const [erros, setErros] = useState(estadoInicial);
 
   function validarCampos(event) {
     const { name, value } = event.target;
