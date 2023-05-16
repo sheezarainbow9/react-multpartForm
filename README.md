@@ -10,7 +10,7 @@
 
 # React
 
-Repositório 05 do curso de React-JS da Alura-One.
+Repositório 05 do curso de React-JS da Alura-One. Foi feito um aprimoramento do projeto passado, implementando o formulário.
 
 React: Hooks, Contexts e boas práticas.
 
