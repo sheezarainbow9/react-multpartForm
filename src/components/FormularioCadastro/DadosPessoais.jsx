@@ -16,7 +16,9 @@ function DadosPessoais({ aoEnviar }) {
     <form
       onSubmit={(event) => {
         event.preventDefault();
-        aoEnviar({ nome, sobrenome, cpf, novidades, promocoes });
+        if (possoEnviar()) {
+          aoEnviar({ nome, sobrenome, cpf, promocoes, novidades });
+        }
       }}
     >
       <TextField
