@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField, Button } from "@material-ui/core";
-import { useState } from "react";
 
 function DadosUsuario({ aoEnviar, validacoes }) {
   const [email, setEmail] = useState("");
@@ -14,6 +13,7 @@ function DadosUsuario({ aoEnviar, validacoes }) {
     novoEstado[name] = validacoes[name](value);
     setErros(novoEstado);
   }
+
   function possoEnviar() {
     for (let campo in erros) {
       if (!erros[campo].valido) {
@@ -33,9 +33,11 @@ function DadosUsuario({ aoEnviar, validacoes }) {
     >
       <TextField
         value={email}
-        onChange={(event) => setEmail(event.target.value)}
+        onChange={(event) => {
+          setEmail(event.target.value);
+        }}
         id="email"
-        nome="email"
+        name="email"
         label="Email"
         type="email"
         required
@@ -45,12 +47,14 @@ function DadosUsuario({ aoEnviar, validacoes }) {
       />
       <TextField
         value={senha}
-        onChange={(event) => setSenha(event.target.value)}
+        onChange={(event) => {
+          setSenha(event.target.value);
+        }}
         onBlur={validarCampos}
         error={!erros.senha.valido}
         helperText={erros.senha.texto}
         id="senha"
-        nome="senha"
+        name="senha"
         label="Senha"
         type="password"
         required
