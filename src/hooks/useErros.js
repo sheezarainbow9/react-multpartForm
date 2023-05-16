@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function useErros(validacoes) {
-  const estadoInicial = criarEstadoIniciai(validacoes);
+  const estadoInicial = criarEstadoInicial(validacoes);
   const [erros, setErros] = useState({ senha: { valido: true, texto: "" } });
 
   function validarCampos(event) {
@@ -20,10 +20,10 @@ function useErros(validacoes) {
     return true;
   }
 
-  return [erros, validarCampos];
+  return [erros, validarCampos, possoEnviar];
 }
 
-function criarEstadoIniciai(validacoes) {
+function criarEstadoInicial(validacoes) {
   const estadoInicial = {};
   for (let campo in validacoes) {
     estadoInicial[campo] = { valido: true, texto: "" };
